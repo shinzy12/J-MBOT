@@ -71,7 +71,7 @@ def banner():
 	wel2 = mark(wel, style='cyan')
 	sol().print(wel2, style='on red')
 	ise = '# INFORMASI PENGEMBANG'
-	fc = mark(ise, style='yellow')
+	fc = mark(ise, style='green')
 	sol().print(fc)
 	tap = me()
 	tap.add_column('Author', style='green', justify='center')
@@ -149,7 +149,7 @@ def menu(my_name,my_id,my_birthday):
 	print(x+'['+h+'•'+x+'] User Ttl    : '+str(birth))
 	print(x+'['+h+'•'+x+'] Ip Address  : '+str(sh['origin']))
 	io = '[01] Crack Dari Pertemanan Publik\n[02] Crack Dari Pertemanan Publik (Massal)\n[03] Cek Result Crack\n[04] Cek Opsi Checkpoint\n[00] Log Out'
-	oi = nel(io, style='cyan')
+	oi = nel(io, style='green')
 	cetak(nel(oi, title='MENU'))
 	jh = input(x+'['+p+'f'+x+'] Pilih : ')
 	if jh in ['1','01']:
