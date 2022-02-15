@@ -71,11 +71,11 @@ def banner():
 	wel2 = mark(wel, style='cyan')
 	sol().print(wel2, style='on red')
 	ise = '# INFORMASI PENGEMBANG'
-	fc = mark(ise, style='green')
+	fc = mark(ise, style='yellow')
 	sol().print(fc)
 	tap = me()
-	tap.add_column('Author', style='yellow', justify='center')
-	tap.add_column('Github', style='yellow', justify='center')
+	tap.add_column('Author', style='green', justify='center')
+	tap.add_column('Github', style='green', justify='center')
 	tap.add_row('Shinzy','https://github.com/shinzy12')
 	sol().print(tap, justify='center')
 
