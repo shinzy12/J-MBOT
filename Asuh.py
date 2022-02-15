@@ -149,7 +149,7 @@ def menu(my_name,my_id,my_birthday):
 	print(x+'['+h+'•'+x+'] User Ttl    : '+str(birth))
 	print(x+'['+h+'•'+x+'] Ip Address  : '+str(sh['origin']))
 	io = '[01] Crack Dari Pertemanan Publik\n[02] Crack Dari Pertemanan Publik (Massal)\n[03] Cek Result Crack\n[04] Cek Opsi Checkpoint\n[00] Log Out'
-	oi = nel(io, style='\x1b[0;34m')
+	oi = nel(io, style='cyan')
 	cetak(nel(oi, title='MENU'))
 	jh = input(x+'['+p+'f'+x+'] Pilih : ')
 	if jh in ['1','01']:
