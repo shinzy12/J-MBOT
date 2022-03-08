@@ -382,7 +382,7 @@ def dump_publik():
 		sol().print(lo, style='cyan')
 		exit()
 	try:
-		koh2 = requests.get('https://graph.facebook.com/%s/subscribers?limit=%s&access_token=%s'')
+		koh2 = requests.get('https://graph.facebook.com/%s/subscribers?limit=%s&access_token=%s')
 		koh3 = json.loads(koh2.text)
 		for pi in koh3['data']:
 			try:id.append(pi['id']+'|'+pi['name'])
