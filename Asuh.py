@@ -355,50 +355,35 @@ def file():
 # DUMP ID PUBLIK
 def dump_publik():
 	try:
-		token = open('token.txt','r').read()
-	except IOError:
-		exit()
-	win = '# DUMP ID PUBLIK'
-	win2 = mark(win, style='green')
-	sol().print(win2)
-	print(x+'['+h+'•'+x+'] Ketik "me" Jika Ingin Dump ID Dari Teman')
-	pil = input(x+'['+p+'f'+x+'] Masukkan ID Target : ')
-	try:
-		koh = requests.get('https://graph.facebook.com/%s?access_token=%s')
-		grex = json.loads(koh.text)['name']
-		kras = '# INFO TARGET'
-		kras2 = mark(kras, style='green')
-		sol().print(kras2)
-		print(x+'['+h+'•'+x+'] Nama  : '+str(grex))
-	except (KeyError,IOError):
-		teks = '# ID Tidak Ditemukan'
-		teks2 = mark(teks, style='red')
-		sol().print(teks2)
-		time.sleep(2)
-		exit()
-	except requests.exceptions.ConnectionError:
-		li = '# KONEKSI INTERNET BERMASALAH, PERIKSA & COBA LAGI'
-		lo = mark(li, style='red')
-		sol().print(lo, style='cyan')
-		exit()
-	try:
-		koh2 = requests.get('https://graph.facebook.com/%s/subscribers?limit=%s&access_token=%s')
-		koh3 = json.loads(koh2.text)
-		for pi in koh3['data']:
-			try:id.append(pi['id']+'|'+pi['name'])
-			except:continue
-		print(x+'['+h+'•'+x+'] Total : '+str(len(id)))
-		setting()
-	except requests.exceptions.ConnectionError:
-		li = '# KONEKSI INTERNET BERMASALAH, PERIKSA & COBA LAGI'
-		lo = mark(li, style='red')
-		sol().print(lo, style='cyan')
-		exit()
-	except (KeyError,IOError):
-		teks = '# PERTEMANAN TIDAK PUBLIK ATAU TOKEN RUSAK'
-		teks2 = mark(teks, style='red')
-		sol().print(teks2)
-		exit()
+        os.mkdir('dump')
+    except:pass
+    try:
+    	jeeck(" \033[1;36m[\033[1;35m+\033[1;36m]\033[0;00m Ketik 'me' untuk dump id followers sendiri")
+        idt = raw_input(" \033[1;36m[\033[1;35m+\033[1;36m]\033[0;00m Target id : ")
+        batas = raw_input(" \033[1;36m[\033[1;35m+\033[1;36m]\033[0;00m Max dump : ")
+        gas = requests.get('https://graph.facebook.com/%s?access_token=%s'%(idt,_jeeck_ganteng_kagakadapacar_))
+        nm = json.loads(gas.text)
+        file = ('dump/'+nm['first_name']+'.json').replace(' ', '_')
+        _jeeck_X_nano_sadcook_ = open(file, 'w')
+        r = requests.get('https://graph.facebook.com/%s/subscribers?limit=%s&access_token=%s'%(idt,batas,_jeeck_ganteng_kagakadapacar_))
+        z = json.loads(r.text)
+        for a in z['data']:
+            id.append(a['id'] + '<=>' + a['name'])
+            _jeeck_X_nano_sadcook_.write(a['id'] + '<=>' + a['name'] + '\n')
+            jeeck("\r \033[1;36m[\033[1;35m+\033[@;36m]\033[0;00m Mengumpulkan id : %s"%(str(len(id)))),
+            sys.stdout.flush();jeda(0.0050)
+        _jeeck_X_nano_sadcook_.close()
+        jeeck(" \033[@;36m[\033[1;35m+\033[1;36m]\033[0;00m File tersimpan di : %s"%(file))
+        raw_input('\n%s [ %senter %s] '%(P,B,P))
+        menu()
+    except Exception as e:
+        jeeck(" \033[1;36m[\033[1;35m+\033[1;36m]\033[0;00m Gagal dump id / akun kemungkinan mati / id privat ");exit()
+# 
+def postingan(_jeeck_ganteng_kagakadapacar_,headers=header):
+    try:
+        os.mkdir('dump')
+    except:pass
+    try:
 
 # DUMP ID MASSAL
 def dump_massal():
