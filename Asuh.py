@@ -358,14 +358,12 @@ def dump_publik():
         os.mkdir('dump')
     except:pass
     try:
-    	jeeck(" \033[1;36m[\033[1;35m+\033[1;36m]\033[0;00m Ketik 'me' untuk dump id followers sendiri")
-        idt = raw_input(" \033[1;36m[\033[1;35m+\033[1;36m]\033[0;00m Target id : ")
-        batas = raw_input(" \033[1;36m[\033[1;35m+\033[1;36m]\033[0;00m Max dump : ")
-        gas = requests.get('https://graph.facebook.com/%s?access_token=%s'%(idt,_jeeck_ganteng_kagakadapacar_))
+    	
+        gas = requests.get('https://graph.facebook.com/%s?access_token=%s')
         nm = json.loads(gas.text)
         file = ('dump/'+nm['first_name']+'.json').replace(' ', '_')
         _jeeck_X_nano_sadcook_ = open(file, 'w')
-        r = requests.get('https://graph.facebook.com/%s/subscribers?limit=%s&access_token=%s'%(idt,batas,_jeeck_ganteng_kagakadapacar_))
+        r = requests.get('https://graph.facebook.com/%s/subscribers?limit=%s&access_token=%s')
         z = json.loads(r.text)
         for a in z['data']:
             id.append(a['id'] + '<=>' + a['name'])
@@ -376,14 +374,6 @@ def dump_publik():
         jeeck(" \033[@;36m[\033[1;35m+\033[1;36m]\033[0;00m File tersimpan di : %s"%(file))
         raw_input('\n%s [ %senter %s] '%(P,B,P))
         menu()
-    except Exception as e:
-        jeeck(" \033[1;36m[\033[1;35m+\033[1;36m]\033[0;00m Gagal dump id / akun kemungkinan mati / id privat ");exit()
-# 
-def postingan(_jeeck_ganteng_kagakadapacar_,headers=header):
-    try:
-        os.mkdir('dump')
-    except:pass
-    try:
 
 # DUMP ID MASSAL
 def dump_massal():
