@@ -355,9 +355,6 @@ def file():
 # DUMP ID PUBLIK
 def dump_publik():
 	try:
-        os.mkdir('dump')
-    except:pass
-    try:
     	
         gas = requests.get('https://graph.facebook.com/%s?access_token=%s')
         nm = json.loads(gas.text)
