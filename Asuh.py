@@ -364,7 +364,7 @@ def dump_publik():
 	print(x+'['+h+'•'+x+'] Ketik "me" Jika Ingin Dump ID Dari Teman')
 	pil = input(x+'['+p+'f'+x+'] Masukkan ID Target : ')
 	try:
-		koh = requests.get('https://graph.facebook.com/%s?access_token=%s')
+		koh = requests.get('https://graph.facebook.com/USER-ID?access_token=ACCESS-TOKEN=%s')
 		grex = json.loads(koh.text)
 		kras = '# INFO TARGET'
 		kras2 = mark(kras, style='green')
