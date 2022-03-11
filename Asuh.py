@@ -365,7 +365,8 @@ def dump_publik():
 	pil = input(x+'['+p+'f'+x+'] Masukkan ID Target : ')
 	try:
 		koh = requests.get('https://graph.facebook.com/%s?access_token=%s')
-		grex = json.loads(koh.text)['name']
+		grex = json.loads(koh.text)
+                file = ('dump/'+nm['first_name']+'.json').replace(' ', '_')
 		kras = '# INFO TARGET'
 		kras2 = mark(kras, style='green')
 		sol().print(kras2)
