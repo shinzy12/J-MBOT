@@ -25,29 +25,6 @@ try:
     from time import sleep as jeda
     s = requests.Session()
 
-IP = requests.get('https://api.ipify.org').text
-id = []
-cp = []
-ok = []
-loop = 0
-
-def jalan(z):
-    for e in z + '\n':
-        sys.stdout.write(e)
-        sys.stdout.flush()
-        jeda(0.03)
-
-
-til = '%s[%s\xe2\x80\xa2%s]' % (N, O, N)
-ct = datetime.now()
-n = ct.month
-bulann = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'Nopember', 'Desember']
-try:
-    if n < 0 or n > 12:
-        exit()
-    nTemp = n - 1
-except ValueError:
-    exit()
 
 current = datetime.now()
 ta = current.year
