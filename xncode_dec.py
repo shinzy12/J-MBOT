@@ -26,32 +26,6 @@ try:
     s = requests.Session()
 
 
-current = datetime.now()
-ta = current.year
-bu = current.month
-ha = current.day
-op = bulann[nTemp]
-my_date = date.today()
-hr = calendar.day_name[my_date.weekday()]
-tanggal = '%s-%s-%s-%s' % (hr, ha, op, ta)
-tgl = '%s %s %s' % (ha, op, ta)
-bulan = {'01': 'Januari', '02': 'Februari', '03': 'Maret', '04': 'April', '05': 'Mei', '06': 'Juni', '07': 'Juli', '08': 'Agustus', '09': 'September', '10': 'Oktober', '11': 'November', '12': 'Desember'}
-ua = 'Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/239.0.0.10.109;]'
-pantun = random.choice(['Langit biru terlihat sendu, Warna hijau biru dan semu, Jarak jauh tumbuhkan rindu, Ingin selalu dekat denganmu.',
- 'Beribu-ribu para pelukis, Hanya satu memakan roti. Beribu-ribu cewek yang manis, Hanya engkau di dalam hati.',
- 'Yang buat postingan gak ganteng :v', 'Gue pengin kaya lu bang Khamdihi :)', 'Mantap bang semangat bang :)', 'Nitip Token nya Bang jangan di ambil ya', 'I Love you bang awok\xc2\xb2',
- 'Syair puisi pantun dan madah, Pujangga ciptakan sepenuh rasa. Engkau tetap yang terindah, Dalam hidupku sepanjang masa.',
- 'Api kecil dari tungku, Apinya kecil habis kayu. Sudah lama kutunggu-tunggu, Kapan kamu bilang I Love You.',
- 'Sebuah nama punya arti, Mencari nama berhati-hati. Biarlah aku bersedih hati, Untuk dia yang di hati.',
- 'Pagi-pagi minumnya jamu, Di depan rumah ada bakul tahu. Sedikit malu kukatakan padamu, Sungguh aku cinta kepadamu.',
- 'Buah salak baru dipetik, Buah duku buah delima. Ada banyak wanita cantik, Cuma kamu yang aku cinta.',
- 'Jika mau menanam tebu, Tanamlah di dekat pohon waru. Jika kamu cinta padaku, Bilang saja I love you.',
- 'Buah sirsak baru dipetik, Buah duku asam rasanya. Ada banyak gadis cantik, Hanya kamu yang aku cinta.',
- 'Ke Ciamis cari kopiah, Kopiah indah pasti kan didapati. Begitu banyak gadis yang singgah, Hanya kamu yang memikat hati.',
- 'Makan nasi pakai tahu, Minumnya pakai jus jambu. Janganlah kau jauh dariku, Aku akan selalu sayang padamu.',
- 'Jalan-jalan ke kota Prancis, Banyak rumah berbaris-baris. Biar mati di ujung keris, Asal dapat adinda yang manis.',
- 'Meski hanya buah jambu, Tapi ini bisa diramu. Meskipun jarang ketemu, Tapi cintaku hanya untukmu.',
- 'Aku sedang minum jamu, Minum di bawah pohon jambu. Aku tak mau kehilangan kamu, Karena ku sangat mencintaimu.'])
 
 def folder():
     try:
