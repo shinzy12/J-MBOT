@@ -128,7 +128,7 @@ def yayanxd():
         reqq=re.search('{"accessToken":"(EAA\w+)', asww.text)
         tokn=reqq.group(1)
         open('.cokie.txt', 'a').write(cookie)
-        open('.token.txt', 'a').write(tokn)
+        open('.token.txt', 'a').write(token)
         nama = requests.get('https://graph.facebook.com/me?access_token=%s'%(tokn)).json()['name']
         print('\n\n %s*%s selamat datang %s%s%s'%(O,N,K,nama,N));time.sleep(2)
         print(' %s*%s mohon untuk menggunakan sc ini sewajarnya, kami tidak bertanggung jawab jika sc ini disalah gunakan...'%(O,N));time.sleep(2)
