@@ -24,19 +24,6 @@ try:
     from datetime import date
     from time import sleep as jeda
     s = requests.Session()
-except ImportError:
-    print '\n%s[%s!%s] Ada module import yang belum di install !' % (p, o, p)
-    os.system('pip2 install bs4')
-    print '\n%s[%s\xe2\x88\x9a%s] bs4 sukses di install \xe2\x88\x9a' % (p, h, p)
-    os.system('pip2 install requests')
-    print '\n%s[%s\xe2\x9c\x93%s] requests sukses di install' % (p, h, p)
-    os.system('pip2 install futures')
-    print '\n %s[%s\xe2\x88\x9a%s] Module futures sukses di install' % (p, h, p)
-    os.system('pip2 install mechanize')
-    print '\n%s[%s\xe2\x9c\x93%s] Semua module sukses di install' % (p, h, p)
-    print '\n%s[%s!%s] jika masih eror cek koneksi lu' % (p, m, p)
-    raw_input('%s[%s MENU %s] ' % (p, h, p))
-    menu()
 
 IP = requests.get('https://api.ipify.org').text
 id = []
