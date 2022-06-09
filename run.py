@@ -917,7 +917,7 @@ def passwrd():
 			except:
 				idf,nmf = yuzong.split('|')[0],yuzong.split('|')[1].lower()
 			frs = nmf.split(' ')[0]
-			pwv = ['rahasia','indonesia','jancok','kontol','jancok123','kontol123','sayang','sayangku','sayang123','bismillah','anjing','katasandi','anjing123']
+			pwv = ['jancok','kontol','jancok123','kontol123','sayang','sayangku','sayang123','bismillah','anjing','katasandi','anjing123']
 			if len(nmf)<6:
 				if len(frs)<3:
 					pass
